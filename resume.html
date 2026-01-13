@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Editable Resume - Srivasthan V A</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lexend', sans-serif;
+      background: #eaeaea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px 0;
+    }
+
+    /* A4 PAGE */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background: #ffffff;
+      padding: 12mm;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      outline: none;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .contact {
+      font-size: 13px;
+      color: #222;
+    }
+
+    .contact a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-top: 15px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .summary-text {
+      font-size: 13px;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    .single-column-list {
+      font-size: 13px;
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .single-column-list li {
+      margin-bottom: 4px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 13.5px;
+    }
+
+    ul {
+      margin-left: 18px;
+      margin-top: 4px;
+    }
+
+    li {
+      font-size: 13px;
+      margin-bottom: 3px;
+      line-height: 1.4;
+    }
+
+    b {
+      font-weight: 600;
+    }
+
+    /* Print */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+      }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+        padding: 12mm;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Editable container -->
+  <div class="page" contenteditable="true" spellcheck="true">
+
+    <div class="header">
+      <h1>SRIVASTHAN V A</h1>
+      <div class="contact">
+        📞 +91 8608709036 |
+        ✉️ <a href="mailto:srivas71825@gmail.com">srivas71825@gmail.com</a> |
+        🔗 <a href="https://github.com/sri718" target="_blank">github.com/sri718</a><br>
+        Cuddalore, Tamil Nadu, India
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Professional Summary</div>
+      <div class="summary-text">
+        AI & Data Science graduate with hands-on experience in Python, Java, SQL, and Machine Learning.
+Strong foundation in software development and real-world project implementation.
+Seeking an entry-level role to apply technical skills and grow within a professional team environment.
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <ul class="single-column-list">
+        <li><b>Programming Languages:</b> Python, Java</li>
+        <li><b>Database Management:</b> SQL, MySQL</li>
+        <li><b>Machine Learning:</b> Scikit-learn, Pandas, NumPy, Supervised Learning, Feature Engineering</li>
+        <li><b>Web Technologies:</b> HTML, CSS, JavaScript (Basic)</li>
+        <li><b>Tools & Platforms:</b> Git, GitHub, Arduino</li>
+        <li><b>Core Concepts:</b> Object-Oriented Programming (OOP), SDLC, Testing</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="item-header">
+        <span>Sri Sairam Engineering College, Chennai</span>
+        <span>2020 – 2024</span>
+      </div>
+      <div style="font-size: 13px;">B.Tech – Artificial Intelligence & Data Science | <b>CGPA: 8.7</b></div>
+
+      <div class="item-header" style="margin-top: 8px;">
+        <span>ARLM Matriculation Higher Secondary School</span>
+        <span>2017 – 2020</span>
+      </div>
+      <div style="font-size: 13px;">HSE & SSLC | <b>Result: 85.6%</b></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Projects</div>
+      <div class="item-header">
+        <span>Crop Recommendation System</span>
+        <span><i>Python, Scikit-learn</i></span>
+      </div>
+      <ul>
+        <li>Developed a machine learning model to recommend optimal crops based on soil and climate parameters.</li>
+        <li>Conducted hyperparameter tuning and built a user-friendly interface for result visualization.</li>
+      </ul>
+
+      <div class="item-header" style="margin-top: 8px;">
+        <span>Yield Prediction System</span>
+        <span><i>Python, Pandas</i></span>
+      </div>
+      <ul>
+        <li>Engineered a predictive model to estimate crop yield using regression and historical datasets.</li>
+      </ul>
+<div class="item-header" style="margin-top: 8px;">
+  <span>Trolley Detection System</span>
+  <span><i>Python, YOLO, OpenCV</i></span>
+</div>
+<ul>
+  <li>Built a computer vision model using YOLO to detect shopping trolleys in images with high accuracy.</li>
+  <li>Used OpenCV for image processing, bounding box drawing, and result visualization.</li>
+</ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Experience</div>
+      <div class="item-header">
+        <span>Testing Intern – All Pro Trainings</span>
+        <span>2022</span>
+      </div>
+      <ul>
+        <li>Gained expertise in STLC; authored and executed test cases and documented defects.</li>
+      </ul>
+
+      <div class="item-header" style="margin-top: 8px;">
+        <span>Robotics Intern – Kodacy</span>
+        <span>2023</span>
+      </div>
+      <ul>
+        <li>Integrated sensors with Arduino programming for automation-based hardware projects.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Publications & Certifications</div>
+      <div class="summary-text" style="line-height: 1.6;">
+        <b>Publication:</b> Crop Recommendation and Yield Prediction using ML – IJPREMS Journal<br>
+        <b>Certifications:</b> ML (Coursera), Arduino (Spoken Tutorial), Patent Creation & HCI (NPTEL)
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Soft Skills</div>
+  <ul class="single-column-list">
+    <li><b>Problem Solving</b> &nbsp;|&nbsp; <b>Collaboration</b></li>
+    <li><b>Adaptability</b> &nbsp;|&nbsp; <b>Communication</b></li>
+  </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
